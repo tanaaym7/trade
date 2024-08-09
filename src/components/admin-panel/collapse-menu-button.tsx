@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown, Dot, LucideIcon } from "lucide-react";
+import { ChevronRight, Dot, LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -58,7 +58,7 @@ export function CollapseMenuButton({
       className="w-full"
     >
       <CollapsibleTrigger
-        className="[&[data-state=open]>div>div>svg]:rotate-180 mb-1"
+        className="[&[data-state=open]>div>div>svg]:rotate-90 mb-1"
         asChild
       >
         <Button
@@ -89,7 +89,7 @@ export function CollapseMenuButton({
                   : "-translate-x-96 opacity-0"
               )}
             >
-              <ChevronDown
+              <ChevronRight
                 size={18}
                 className="transition-transform duration-200"
               />
@@ -102,7 +102,7 @@ export function CollapseMenuButton({
           <Button
             key={index}
             variant={active ? "secondary" : "ghost"}
-            className="w-full justify-start h-10 mb-1"
+            className="w-full justify-start h-8 mb-1 capitalize"
             asChild
           >
             <Link href={href}>
